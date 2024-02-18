@@ -24,14 +24,14 @@ public class RestTemplate_3 {
 
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+
         headers.add("X-Naver-Client-Id", apiId);
         headers.add("X-Naver-Client-Secret", apiSecret);
-
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
         RestTemplate restTemplate = new RestTemplate();
-
         ResponseEntity<String> response = restTemplate.exchange(apiURL, HttpMethod.GET, entity, String.class);
+
         System.out.println(response.getBody());
     }
 }

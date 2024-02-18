@@ -18,11 +18,10 @@ public class OpenFeign_5 {
     private final NaverApiClient naverApiClient;
 
     public void openFeign() {
-        String query = "Kernel360";
-        String clientId = apiId;
-        String clientSecret = apiSecret;
-
-        ResponseEntity<String> response = naverApiClient.searchBlog(query, clientId, clientSecret);
+        ResponseEntity<String> response = naverApiClient.searchBlog(
+                "Kernel360",
+                apiId,
+                apiSecret);
 
         System.out.println(response.getBody());
     }

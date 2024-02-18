@@ -26,12 +26,12 @@ public class UrlConnection_1 {
         String text = URLEncoder.encode("Kernel360", StandardCharsets.UTF_8);
         String apiURL = "https://openapi.naver.com/v1/search/blog?query=" + text;
 
+        URL url = new URL(apiURL);
+        HttpURLConnection con = (HttpURLConnection)url.openConnection();
+
         Map<String, String> requestHeaders = new HashMap<>();
         requestHeaders.put("X-Naver-Client-Id", apiId);
         requestHeaders.put("X-Naver-Client-Secret", apiSecret);
-
-        URL url = new URL(apiURL);
-        HttpURLConnection con = (HttpURLConnection)url.openConnection();
 
         con.setRequestMethod("GET");
         for(Map.Entry<String, String> header :requestHeaders.entrySet()) {
@@ -39,15 +39,12 @@ public class UrlConnection_1 {
         }
 
         InputStreamReader streamReader = new InputStreamReader(con.getInputStream());
-
         BufferedReader lineReader = new BufferedReader(streamReader);
         StringBuilder responseBody = new StringBuilder();
-
         String line;
         while ((line = lineReader.readLine()) != null) {
             responseBody.append(line);
         }
-
         System.out.println(responseBody);
     }
 
