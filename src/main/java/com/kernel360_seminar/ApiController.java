@@ -1,7 +1,8 @@
 package com.kernel360_seminar;
 
-import com.kernel360_seminar._1_url_connection.UrlConnection;
-import com.kernel360_seminar._2_http_client.HttpClient;
+import com.kernel360_seminar._1_url_connection.UrlConnection_1;
+import com.kernel360_seminar._2_http_client.HttpClient_2;
+import com.kernel360_seminar._3_rest_template.RestTemplate_3;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,18 +14,25 @@ import java.io.IOException;
 @RequiredArgsConstructor
 class ApiController {
 
-    private final UrlConnection urlConnection;
-    private final HttpClient httpClient;
+    private final UrlConnection_1 urlConnection_1;
+    private final HttpClient_2 httpClient_2;
+    private final RestTemplate_3 restTemplate_3;
 
     @GetMapping("/1")
     public ResponseEntity.BodyBuilder urlConnection() throws IOException {
-        urlConnection.urlConnection();
+        urlConnection_1.urlConnection();
         return ResponseEntity.ok();
     }
 
     @GetMapping("/2")
     public ResponseEntity.BodyBuilder httpClient() throws IOException {
-        httpClient.httpClient();
+        httpClient_2.httpClient();
+        return ResponseEntity.ok();
+    }
+
+    @GetMapping("/3")
+    public ResponseEntity.BodyBuilder restTemplate() {
+        restTemplate_3.restTemplate();
         return ResponseEntity.ok();
     }
 }

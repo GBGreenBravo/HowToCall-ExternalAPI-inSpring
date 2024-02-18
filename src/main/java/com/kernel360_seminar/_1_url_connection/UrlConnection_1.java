@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class UrlConnection {
+public class UrlConnection_1 {
 
     @Value("${naver-api.client.id}")
     private String apiId;

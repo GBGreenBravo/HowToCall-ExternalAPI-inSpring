@@ -14,7 +14,7 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
 @Service
-public class HttpClient {
+public class HttpClient_2 {
 
     @Value("${naver-api.client.id}")
     private String apiId;
@@ -35,9 +35,7 @@ public class HttpClient {
         HttpResponse response = httpClient.execute(httpGet);
         HttpEntity entity = response.getEntity();
 
-        if (entity != null) {
-            String responseBody = EntityUtils.toString(entity);
-            System.out.println(responseBody);
-        }
+        String responseBody = EntityUtils.toString(entity);
+        System.out.println(responseBody);
     }
 }
