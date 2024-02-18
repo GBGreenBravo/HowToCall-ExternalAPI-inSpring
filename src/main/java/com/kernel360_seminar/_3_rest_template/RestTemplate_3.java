@@ -24,7 +24,6 @@ public class RestTemplate_3 {
 
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-
         headers.add("X-Naver-Client-Id", apiId);
         headers.add("X-Naver-Client-Secret", apiSecret);
         HttpEntity<String> entity = new HttpEntity<>(headers);
