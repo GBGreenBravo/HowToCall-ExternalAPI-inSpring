@@ -20,7 +20,7 @@ public class WebClient_4 {
     private String apiSecret;
 
     public void webClient() {
-        String text = URLEncoder.encode("그린팩토리", StandardCharsets.UTF_8);
+        String text = URLEncoder.encode("Kernel360", StandardCharsets.UTF_8);
         String apiURL = "https://openapi.naver.com/v1/search/blog?query=" + text;
 
         WebClient webClient = WebClient.builder().defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)

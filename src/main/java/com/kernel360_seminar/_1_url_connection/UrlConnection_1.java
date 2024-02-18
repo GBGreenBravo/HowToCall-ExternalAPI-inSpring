@@ -23,7 +23,7 @@ public class UrlConnection_1 {
     private String apiSecret;
 
     public void urlConnection() throws IOException {
-        String text = URLEncoder.encode("그린팩토리", StandardCharsets.UTF_8);
+        String text = URLEncoder.encode("Kernel360", StandardCharsets.UTF_8);
         String apiURL = "https://openapi.naver.com/v1/search/blog?query=" + text;
 
         Map<String, String> requestHeaders = new HashMap<>();

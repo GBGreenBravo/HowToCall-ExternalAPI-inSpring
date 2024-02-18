@@ -19,7 +19,7 @@ public class RestTemplate_3 {
     private String apiSecret;
 
     public void restTemplate() {
-        String text = URLEncoder.encode("그린팩토리", StandardCharsets.UTF_8);
+        String text = URLEncoder.encode("Kernel360", StandardCharsets.UTF_8);
         String apiURL = "https://openapi.naver.com/v1/search/blog?query=" + text;
 
         HttpHeaders headers = new HttpHeaders();

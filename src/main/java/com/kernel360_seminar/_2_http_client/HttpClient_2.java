@@ -23,7 +23,7 @@ public class HttpClient_2 {
     private String apiSecret;
 
     public void httpClient() throws IOException {
-        String text = URLEncoder.encode("그린팩토리", StandardCharsets.UTF_8);
+        String text = URLEncoder.encode("Kernel360", StandardCharsets.UTF_8);
         String apiURL = "https://openapi.naver.com/v1/search/blog?query=" + text;
 
         CloseableHttpClient httpClient = HttpClients.createDefault();
