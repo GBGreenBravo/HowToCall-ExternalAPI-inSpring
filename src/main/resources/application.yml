@@ -1,0 +1,4 @@
+naver-api:
+  client:
+    id: ${X_NAVER_CLIENT_ID}
+    secret: ${X_NAVER_CLIENT_SECRET}
