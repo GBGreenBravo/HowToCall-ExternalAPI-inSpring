@@ -18,7 +18,7 @@ public class OpenFeign_5 {
     private final NaverApiClient naverApiClient;
 
     public void openFeign() {
-        String query = "그린팩토리";
+        String query = "Kernel360";
         String clientId = apiId;
         String clientSecret = apiSecret;
 
