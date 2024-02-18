@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,7 +23,7 @@ public class UrlConnection {
     private String apiSecret;
 
     public void urlConnection() throws IOException {
-        String text = URLEncoder.encode("그린팩토리", "UTF-8");
+        String text = URLEncoder.encode("그린팩토리", StandardCharsets.UTF_8);
         String apiURL = "https://openapi.naver.com/v1/search/blog?query=" + text;
 
         Map<String, String> requestHeaders = new HashMap<>();
@@ -47,7 +48,7 @@ public class UrlConnection {
             responseBody.append(line);
         }
 
-        System.out.println(responseBody.toString());
+        System.out.println(responseBody);
     }
 
 //    public void urlConnection() throws IOException {
