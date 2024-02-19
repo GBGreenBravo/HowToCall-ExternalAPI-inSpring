@@ -5,6 +5,7 @@ import com.kernel360_seminar._2_http_client.HttpClient_2;
 import com.kernel360_seminar._3_rest_template.RestTemplate_3;
 import com.kernel360_seminar._4_web_client.WebClient_4;
 import com.kernel360_seminar._5_openfeign.OpenFeign_5;
+import com.kernel360_seminar._6_rest_client.RestClient_6;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,7 @@ class ApiController {
     private final RestTemplate_3 restTemplate_3;
     private final WebClient_4 webClient_4;
     private final OpenFeign_5 openFeign_5;
+    private final RestClient_6 restClient_6;
 
     @GetMapping("/1")
     public ResponseEntity.BodyBuilder urlConnection() throws IOException {
@@ -49,6 +51,12 @@ class ApiController {
     @GetMapping("/5")
     public ResponseEntity.BodyBuilder openFeign() {
         openFeign_5.openFeign();
+        return ResponseEntity.ok();
+    }
+
+    @GetMapping("/6")
+    public ResponseEntity.BodyBuilder restClient() {
+        restClient_6.restClient();
         return ResponseEntity.ok();
     }
 }
