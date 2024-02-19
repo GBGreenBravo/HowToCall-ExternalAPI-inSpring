@@ -15,11 +15,11 @@ public class OpenFeign_5 {
     @Value("${naver-api.client.secret}")
     private String apiSecret;
 
-    private final NaverApiClient naverApiClient;
+//    private final NaverApiClient naverApiClient;
 
     public void openFeign() {
-        ResponseEntity<String> response = naverApiClient.searchBlog("Kernel360", apiId, apiSecret);
-
-        System.out.println(response.getBody());
+//        ResponseEntity<String> response = naverApiClient.searchBlog("Kernel360", apiId, apiSecret);
+//
+//        System.out.println(response.getBody());
     }
 }
