@@ -15,4 +15,11 @@ public interface NaverApiClient {
             @RequestHeader("X-Naver-Client-Id") String clientId,
             @RequestHeader("X-Naver-Client-Secret") String clientSecret
     );
+
+    @GetMapping("/v1/search/news")
+    ResponseEntity<String> searchNews(
+            @RequestParam("query") String query,
+            @RequestHeader("X-Naver-Client-Id") String clientId,
+            @RequestHeader("X-Naver-Client-Secret") String clientSecret
+    );
 }
